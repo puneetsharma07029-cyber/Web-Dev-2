@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Event Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎯 Smart Event Dashboard</h1>
+
+<div class="container">
+
+    
+    <div class="form-box">
+        <h3>Add New Event</h3>
+
+        <form id="eventForm">
+            <label>Event Title</label>
+            <input type="text" id="title" required>
+
+            <label>Event Date</label>
+            <input type="date" id="date" required>
+
+            <label>Category</label>
+            <select id="category">
+                <option>Workshop</option>
+                <option>Seminar</option>
+                <option>Sports</option>
+            </select>
+
+            <label>Description</label>
+            <textarea id="description"></textarea>
+
+            <button type="submit">Add Event</button>
+        </form>
+    </div>
+
+    
+    <div class="event-box">
+        <h3>My Events</h3>
+        <div id="eventList"></div>
+    </div>
+
+</div>
+
+
+<div class="dom-box">
+    <h3>DOM Manipulation Demo</h3>
+    <p id="demoText">This is original text</p>
+    <button id="changeBtn">Change Text</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
