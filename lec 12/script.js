@@ -53,3 +53,20 @@ async function getData(){
     console.log("After promise");
 }
 getData();
+
+// weather data fetching 
+async function fetchData(city){
+    try {
+        const API_Key = "274932941dc860d7140bbe2db64be31b";
+        const Response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}&units=metric');
+
+        const data = await Response.json();
+        console.log(city);
+        console.log(data.main.temp);
+        console.log(data.main.humidity);
+
+    } catch (err){
+        console.error(err);
+    }
+}
+fetchData("london")
